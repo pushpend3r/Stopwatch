@@ -77,7 +77,7 @@ breset.addEventListener("click", () => {
   breset.style.display = "none";
   bresume.style.display = "none";
   bstart.style.display = "inherit";
-  document.querySelector(".lap-heading").className = "hidden";
+  document.querySelector(".lap-heading").classList.replace("show", "hidden");
   document.querySelector(".laps").innerHTML = "";
   document.querySelector(".timers-lap").style.display = "none";
 });
