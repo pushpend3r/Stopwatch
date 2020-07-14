@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  > * {
+    margin-top: 5vh;
+  }
+}
+
+header {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.timers {
+  text-align: center;
+
+  .timers-total {
+    font-size: 3rem;
+  }
+
+  .timers-lap {
+    font-size: 2rem;
+    color: grey;
+    display: none;
+  }
+}
+
+.controls {
+  > * + * {
+    margin-left: 10px;
+  }
+
+  display: flex;
+
+  > #stop,
+  > #lap,
+  > #reset,
+  > #resume {
+    display: none;
+  }
+}
+
+button {
+  display: block;
+  font-family: inherit;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: 0;
+  cursor: pointer;
+  background-color: #fff;
+  outline: none;
+}
+
+#start {
+  &:hover {
+    background-color: rgb(174, 226, 96);
+    color: black;
+  }
+}
+
+#stop {
+  &:hover {
+    background-color: red;
+    color: white;
+  }
+}
+
+#resume {
+  &:hover {
+    background-color: rgb(160, 255, 17);
+  }
+}
+
+#reset {
+  &:hover {
+    background-color: rgb(37, 33, 33);
+    color: white;
+  }
+}
+
+#lap {
+  &:hover {
+    background-color: skyblue;
+  }
+}
+
+.lapInfo {
+  width: 50%;
+  font-size: 16px;
+  text-align: center;
+  overflow: auto;
+  .lap-heading {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    margin-bottom: 1rem;
+    h6 {
+      flex: 1;
+      font-size: 1.5em;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .lap {
+    display: flex;
+    margin-bottom: 0.8rem;
+    p {
+      flex: 1;
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .lapInfo {
+    width: 70%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  .lapInfo {
+    width: 100%;
+    font-size: 12px;
+  }
+}

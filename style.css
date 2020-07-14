@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body > * {
+  margin-top: 5vh;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+.timers {
+  text-align: center;
+}
+
+.timers .timers-total {
+  font-size: 3rem;
+}
+
+.timers .timers-lap {
+  font-size: 2rem;
+  color: grey;
+  display: none;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.controls > * + * {
+  margin-left: 10px;
+}
+
+.controls > #stop,
+.controls > #lap,
+.controls > #reset,
+.controls > #resume {
+  display: none;
+}
+
+button {
+  display: block;
+  font-family: inherit;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: 0;
+  cursor: pointer;
+  background-color: #fff;
+  outline: none;
+}
+
+#start:hover {
+  background-color: #aee260;
+  color: black;
+}
+
+#stop:hover {
+  background-color: red;
+  color: white;
+}
+
+#resume:hover {
+  background-color: #a0ff11;
+}
+
+#reset:hover {
+  background-color: #252121;
+  color: white;
+}
+
+#lap:hover {
+  background-color: skyblue;
+}
+
+.lapInfo {
+  width: 50%;
+  font-size: 16px;
+  text-align: center;
+  overflow: auto;
+}
+
+.lapInfo .lap-heading {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.lapInfo .lap-heading h6 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.5em;
+}
+
+.lapInfo .hidden {
+  display: none;
+}
+
+.lapInfo .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lapInfo .lap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.lapInfo .lap p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.2em;
+}
+
+@media (max-width: 800px) {
+  .lapInfo {
+    width: 70%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  .lapInfo {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
